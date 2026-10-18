@@ -490,7 +490,7 @@ func (submenu *Submenu) Render(isSubmenuOpen bool, height int, width int) string
 
 	// 4. Make sure everything fits after adding the overflow indicators by popping
 	//    items from the start until we no longer exceed the height.
-	for totalHeight > height {
+	for totalHeight > height && rangeStart < rangeEnd {
 		if !topOverflow {
 			topOverflow = true
 			totalHeight++
